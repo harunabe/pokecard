@@ -1,0 +1,284 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+.button {
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 20px;
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 10px 20px;
+  width: 200px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cardlist {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  border: 10px #cccccc solid;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  padding: 60px 20px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+.card.normal {
+  background: rgba(165, 165, 165, 0.8);
+}
+.card.fighting {
+  background: rgba(248, 155, 93, 0.8);
+}
+.card.flying {
+  background: rgba(167, 158, 248, 0.8);
+}
+.card.poison {
+  background: rgba(141, 54, 255, 0.8);
+}
+.card.ground {
+  background: rgba(26, 143, 15, 0.8);
+}
+.card.bug {
+  background: rgba(160, 231, 67, 0.8);
+}
+.card.ghost {
+  background: rgba(0, 0, 0, 0.8);
+}
+.card.steel {
+  background: rgba(86, 75, 243, 0.8);
+}
+.card.fire {
+  background: rgba(247, 138, 49, 0.8);
+}
+.card.water {
+  background: rgba(51, 171, 250, 0.8);
+}
+.card.grass {
+  background: rgba(45, 180, 33, 0.8);
+}
+.card.electric {
+  background: rgba(244, 247, 62, 0.8);
+}
+.card.psychic {
+  background: rgba(240, 104, 104, 0.8);
+}
+.card.ice {
+  background: rgba(55, 247, 247, 0.8);
+}
+.card.dragon {
+  background: rgba(27, 18, 150, 0.8);
+}
+.card.dark {
+  background: rgba(75, 74, 74, 0.8);
+}
+.card.fairy {
+  background: rgba(240, 167, 234, 0.8);
+}
+.card:hover {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.card-image {
+  border: #000000 solid 1px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  background: url(img/bg_natural_mori.jpg) center center no-repeat;
+}
+.card-image img {
+  line-height: 1;
+}
+
+.card-name {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 0.2;
+}
+
+.card-hp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.8;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.card-hp span {
+  font-size: 14px;
+}
+
+.card-hp::after {
+  font-family: FontAwesome, "Font Awesome 6 Brands";
+  display: inline-block;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  background: #e28d8d;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 2px;
+  box-sizing: border-box;
+  margin-left: 5px;
+  vertical-align: 6px;
+  border: #000000 solid 2px;
+}
+
+.card-hp.normal::after {
+  content: "\f111";
+  background: #a5a5a5;
+}
+.card-hp.fighting::after {
+  content: "\f255";
+  background: #f89b5d;
+}
+.card-hp.flying::after {
+  content: "\f56b";
+  background: #a79ef8;
+}
+.card-hp.poison::after {
+  content: "\f714";
+  background: #8d36ff;
+}
+.card-hp.ground::after {
+  content: "\e52f";
+  background: #1a8f0f;
+}
+.card-hp.bug::after {
+  content: "\f188";
+  background: #a0e743;
+}
+.card-hp.ghost::after {
+  content: "\f6e2";
+  background: #000000;
+}
+.card-hp.steel::after {
+  content: "\f0ad";
+  background: #564bf3;
+}
+.card-hp.fire::after {
+  content: "\f7e4";
+  background: #f78a31;
+}
+.card-hp.water::after {
+  content: "\f043";
+  background: #33abfa;
+}
+.card-hp.grass::after {
+  content: "\f299";
+  background: #2db421;
+}
+.card-hp.electric::after {
+  content: "\f0e7";
+  background: #f4f73e;
+}
+.card-hp.psychic::after {
+  content: "\f8d9";
+  background: #f06868;
+}
+.card-hp.ice::after {
+  content: "\f2dc";
+  background: #37f7f7;
+}
+.card-hp.dragon::after {
+  content: "\f6d5";
+  background: #1b1296;
+}
+.card-hp.dark::after {
+  content: "\f186";
+  background: #4b4a4a;
+}
+.card-hp.fairy::after {
+  content: "\f69a";
+  background: #f0a7ea;
+}
+
+.card-move {
+  -webkit-text-stroke: 0.5px #fff;
+  margin-top: 40px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+}/*# sourceMappingURL=common.css.map */

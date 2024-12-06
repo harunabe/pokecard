@@ -1,0 +1,143 @@
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+body{
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+
+}
+.button{
+    background-color: #fff100;
+    border-bottom: 5px solid #ccc100;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 10px 20px;
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.cardlist{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.card{
+    display: inline-block;
+    border: 10px #cccccc solid;
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding: 60px 20px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    
+    
+    &.normal{ background: #a5a5a5cc;}
+    &.fighting{ background: #f89b5dcc;}
+    &.flying{ background: #a79ef8cc;}
+    &.poison{ background: #8d36ffcc;}
+    &.ground{ background: #1a8f0fcc;}
+    &.bug{ background: #a0e743cc;}
+    &.ghost{ background: #000000cc;}
+    &.steel{background: #564bf3cc;}
+    &.fire{ background: #f78a31cc;}
+    &.water{ background: #33abfacc;}
+    &.grass{ background: #2db421cc;}
+    &.electric{ background: #f4f73ecc;}
+    &.psychic{ background: #f06868cc;}
+    &.ice{ background: #37f7f7cc;}
+    &.dragon{ background: #1b1296cc;}
+    &.dark{background: #4b4a4acc;}
+    &.fairy{ background: #f0a7eacc;}
+    &:hover {
+        transform: rotateY( 180deg );
+        cursor: pointer;
+      }
+}
+.card-image{
+    border: #000000 solid 1px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background: url(img/bg_natural_mori.jpg) center center no-repeat;
+    img{
+        line-height: 1;
+    }
+    
+}
+.card-name{
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0.2;
+
+}
+.card-hp{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8;
+    -webkit-text-stroke: 1px #fff;
+}
+.card-hp span{
+    font-size: 14px;
+}
+.card-hp::after{
+	font-family: FontAwesome,"Font Awesome 6 Brands";
+    display:inline-block;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    background: #e28d8d;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 2px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    vertical-align: 6px;
+    border: #000000 solid 2px;
+}
+.card-hp{
+    &.normal::after{ content: "\f111"; background: #a5a5a5;}
+    &.fighting::after{content: "\f255"; background: #f89b5d;}
+    &.flying::after{content: "\f56b"; background: #a79ef8;}
+    &.poison::after{content: "\f714"; background: #8d36ff;}
+    &.ground::after{content: "\e52f"; background: #1a8f0f;}
+    &.bug::after{content: "\f188"; background: #a0e743;}
+    &.ghost::after{content: "\f6e2"; background: #000000;}
+    &.steel::after{content: "\f0ad"; background: #564bf3;}
+    &.fire::after{content: "\f7e4"; background: #f78a31;}
+    &.water::after{content: "\f043"; background: #33abfa;}
+    &.grass::after{content: "\f299"; background: #2db421;}
+    &.electric::after{content: "\f0e7"; background: #f4f73e;}
+    &.psychic::after{content: "\f8d9"; background: #f06868;}
+    &.ice::after{content: "\f2dc"; background: #37f7f7;}
+    &.dragon::after{content: "\f6d5"; background: #1b1296;}
+    &.dark::after{content: "\f186"; background: #4b4a4a;}
+    &.fairy::after{content: "\f69a"; background: #f0a7ea;}
+}
+.card-move{
+    -webkit-text-stroke: 0.5px #fff;
+    margin-top: 40px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
